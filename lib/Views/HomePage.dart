@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:themoviedb/Model/movieModel.dart';
 import 'package:themoviedb/Provider/AppConfigs.dart';
 import 'package:themoviedb/Provider/HomepageProvider.dart';
+import 'package:themoviedb/Provider/SearchProvider.dart';
 import 'package:themoviedb/Views/MoviePage.dart';
 import 'package:themoviedb/Views/SearchPage.dart';
 
@@ -85,10 +86,13 @@ class MovieHome extends StatelessWidget {
                                 children: [
                                   AspectRatio(
                                     aspectRatio: 1 / 1,
-                                    child: Image.network(
-                                      "${AppConfig().imageBaseUrl}${movies[index]!.posterPath}",
-                                      fit: BoxFit.cover,
-                                    ),
+                                    child: movies[index]!.posterPath == null ||
+                                            movies[index]!.posterPath!.isEmpty
+                                        ? const Text("Image not found")
+                                        : Image.network(
+                                            "${AppConfig().imageBaseUrl}${movies[index]!.posterPath}",
+                                            fit: BoxFit.cover,
+                                          ),
                                   ),
                                   const SizedBox(width: 8),
                                   Column(
