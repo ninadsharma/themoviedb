@@ -14,7 +14,6 @@ class DiscoverMoviesProvider extends ChangeNotifier {
         .get(
             '${AppConfig().baseUrl}discover/movie?api_key=${AppConfig().moviesKey}&adult=true&language=en-US&page=1')
         .then((value) {
-      log("${value.statusCode}");
       if (value.statusCode == 200) {
         _movies = DiscoverMoviesModel.fromJson(value.data).results;
       }
