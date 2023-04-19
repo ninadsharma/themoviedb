@@ -1,12 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:themoviedb/Model/movieModel.dart';
 import 'package:themoviedb/Provider/AppConfigs.dart';
 import 'package:themoviedb/Provider/HomepageProvider.dart';
-import 'package:themoviedb/Provider/SearchProvider.dart';
 import 'package:themoviedb/Views/MoviePage.dart';
 import 'package:themoviedb/Views/SearchPage.dart';
 

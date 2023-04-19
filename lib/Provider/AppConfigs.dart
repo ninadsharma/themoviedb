@@ -2,9 +2,8 @@ import 'package:flutter/cupertino.dart';
 
 class AppConfig {
   String baseUrl = 'https://api.themoviedb.org/3/';
-  // discover/movie?api_key=135403b3eff57d396b63f27b027c0d4e&language=en-US&sort_by=primary_release_date.desc&include_adult=true&include_video=true&page=1
-  String moviesKey = '135403b3eff57d396b63f27b027c0d4e';
   String imageBaseUrl = 'https://image.tmdb.org/t/p/original/';
+  String moviesKey = '135403b3eff57d396b63f27b027c0d4e';
 }
 
 late double height, width, marginH, marginV, paddingH, paddingV;

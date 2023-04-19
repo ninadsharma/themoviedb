@@ -12,11 +12,11 @@ void main() {
       ChangeNotifierProvider<DiscoverMoviesProvider>(
           create: (_) => DiscoverMoviesProvider()),
     ],
-    child: MyApp(),
+    child: MoviesDBApp(),
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MoviesDBApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
